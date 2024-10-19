@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { FaShieldAlt, FaHeart, FaUsers, FaArrowRight, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSmile, FaHospital, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import Image from 'next/image';
 import ServicesSection from '@/components/Services';
+import Link from 'next/link';
 const page = () => {
   const AnimatedCounter = ({ end, duration }) => {
     const [count, setCount] = useState(0);
@@ -89,15 +90,15 @@ const page = () => {
             <p className="text-xl text-white mb-8">
               Innovative health insurance solutions tailored just for you
             </p>
-            <motion.button
+            <Link href="/contact"
               className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+
             >
               Get Started
-            </motion.button>
+            </Link>
           </motion.div>
         </section>
+
 
         <section id="about" className="mb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-semibold text-center mb-12">Why Choose Sigma Health?</h2>
@@ -111,9 +112,9 @@ const page = () => {
             ))}
           </div>
         </section>
-
-
         <ServicesSection />
+
+
 
         <section id="stats" className="mb-24">
           <div className="container mx-auto px-4">
