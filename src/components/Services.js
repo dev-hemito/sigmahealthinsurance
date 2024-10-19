@@ -1,3 +1,5 @@
+import Image from 'next/image';
+import Link from 'next/link';
 import React, { useState, useEffect } from 'react';
 import { FaChevronRight, FaTimes } from 'react-icons/fa';
 
@@ -115,7 +117,7 @@ const ServicePlans = ({ service, plans, onClose }) => (
         >
           <h3 className="text-xl font-bold mb-3 text-gray-800">{plan.title}</h3>
           <p className="text-gray-600 mb-4">{plan.description}</p>
-          <div className="space-y-2">
+          <div className="space-y-2 mb-4">
             {plan.features.map((feature, fidx) => (
               <div key={fidx} className="flex items-start space-x-2">
                 <FaChevronRight className="text-blue-500 mt-1 flex-shrink-0" />
@@ -123,6 +125,8 @@ const ServicePlans = ({ service, plans, onClose }) => (
               </div>
             ))}
           </div>
+          <Link href="/contact" className="bg-blue-800 text-white py-3 px-6 rounded-full"> Know More </Link>
+          
         </div>
       ))}
     </div>
@@ -135,7 +139,9 @@ const ServiceCard = ({ title, image, onClick }) => (
     onClick={onClick}
   >
     <div className="relative h-64 overflow-hidden">
-      <img
+      <Image
+        width={300}
+        height={300}
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"

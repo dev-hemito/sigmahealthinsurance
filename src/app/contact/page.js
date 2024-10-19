@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+
 import { FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSmile, FaHospital, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
@@ -126,15 +126,15 @@ const Page = () => {
             <div className="space-y-4">
               <div className="flex items-center">
                 <FaMapMarkerAlt className="text-blue-600 text-xl mr-3" />
-                <p>123 Health Street, Wellness City, HC 12345</p>
+                <p>Sreerangam Building, Chittoor Rd, Iyyattil Junction, Shenoys, Ernakulam, Kerala 682011</p>
               </div>
               <div className="flex items-center">
                 <FaPhone className="text-blue-600 text-xl mr-3" />
-                <p>(123) 456-7890</p>
+                <a  href='tel:+919349780957'>+91 9349780957</a>
               </div>
               <div className="flex items-center">
                 <FaEnvelope className="text-blue-600 text-xl mr-3" />
-                <p>contact@sigmahealth.com</p>
+                <p>sigmahealthinsurance@gmail.com</p>
               </div>
               <div className="flex items-center">
                 <FaClock className="text-blue-600 text-xl mr-3" />
