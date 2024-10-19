@@ -85,10 +85,12 @@ const Page = () => {
                   required
                 >
                   <option value="" disabled>Select a plan</option>
-                  <option value="basic">Basic Plan</option>
-                  <option value="premium">Premium Plan</option>
-                  <option value="pro">Pro Plan</option>
-                  {/* Add more options as needed */}
+                  <option value="Personal Accidental Insurance">Personal Accidental Insurance</option>
+                  <option value="Critical Illness Insurance">Critical Illness Insurance</option>
+                  <option value="Family Health Insurance">Family Health Insurance</option>
+                  <option value="Individual Insurance">Individual Insurance</option>
+                  <option value="Hospital Daily Cash Insurance">Hospital Daily Cash Insurance</option>
+                
                 </select>
               </div>
 

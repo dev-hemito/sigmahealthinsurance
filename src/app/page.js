@@ -1,10 +1,10 @@
 'use client'
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import { FaShieldAlt, FaHeart, FaUsers, FaArrowRight, FaMapMarkerAlt, FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaSmile, FaHospital, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { FaShieldAlt, FaHeart, FaUsers, FaSmile, FaHospital } from 'react-icons/fa';
 import Image from 'next/image';
 import ServicesSection from '@/components/Services';
 import Link from 'next/link';
+
 const page = () => {
   const AnimatedCounter = ({ end, duration }) => {
     const [count, setCount] = useState(0);
@@ -28,28 +28,24 @@ const page = () => {
   };
 
   const InsuranceScheme = ({ title, description, icon, image }) => (
-    <motion.div
+    <div
       className="bg-white p-6 rounded-lg shadow-lg overflow-hidden"
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300 }}
     >
       <div className="flex items-center mb-4">
         {icon}
         <h3 className="text-xl font-semibold ml-3">{title}</h3>
       </div>
       <p className="text-gray-600 mb-4">{description}</p>
-      <Image width={500} height={500} src={image} alt={title} className="w-full h-48 object-cover rounded cover" />
-    </motion.div>
+      <Image width={300} height={300} src={image} alt={title} className="w-full h-48 object-cover rounded cover" />
+    </div>
   );
 
   const ImpactCard = ({ icon: Icon, value, label, image }) => (
-    <motion.div
+    <div
       className="bg-white rounded-lg shadow-lg overflow-hidden"
-      whileHover={{ scale: 1.05 }}
-      transition={{ type: "spring", stiffness: 300 }}
     >
       <div className="relative h-40">
-        <img width={500} height={500} src={image} alt={label} className="w-full h-full object-cover" />
+        <Image width={300} height={300} src={image} alt={label} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <Icon className="text-white text-5xl" />
@@ -63,22 +59,21 @@ const page = () => {
         </p>
         <p className="text-xl text-gray-700">{label}</p>
       </div>
-    </motion.div>
+    </div>
   );
 
   return (
     <div className="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen">
       <main className="container mx-auto px-4 py-12">
         <section id="hero" className="text-center mb-24 relative">
-          <motion.img
+          <Image
             src="/home.jpg"
             alt="Happy family"
             className="w-full h-[60vh] object-cover rounded-xl mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            width={500}
+            height={500}
           />
-          <motion.div
+          <div
             className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-50 rounded-xl"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -96,7 +91,7 @@ const page = () => {
             >
               View plans
             </Link>
-          </motion.div>
+          </div>
         </section>
 
 
@@ -124,19 +119,19 @@ const page = () => {
                 icon={FaUsers}
                 value={500000}
                 label="Insured Members"
-                image="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                image="/client.jpg"
               />
               <ImpactCard
                 icon={FaSmile}
                 value={98}
                 label="Customer Satisfaction"
-                image="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80"
+                image="/client.jpg"
               />
               <ImpactCard
                 icon={FaHospital}
                 value={5000}
                 label="Healthcare Partners"
-                image="https://images.unsplash.com/photo-1538108149393-fbbd81895907?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1928&q=80"
+                image="/client.jpg"
               />
             </div>
           </div>
@@ -149,18 +144,16 @@ const page = () => {
               { name: "John Doe", quote: "Sigma Health has been a lifesaver for my family. Their comprehensive coverage and excellent customer service give us peace of mind.", image: "/client.jpg" },
               { name: "Jane Smith", quote: "I've never had an insurance company that cares so much about preventive care. Sigma Health's wellness programs have truly improved my life.", image: "/client.jpg" },
             ].map((testimonial, index) => (
-              <motion.div
+              <div
                 key={index}
                 className="bg-white p-6 rounded-lg shadow-lg"
-                whileHover={{ scale: 1.03 }}
-                transition={{ type: "spring", stiffness: 300 }}
               >
                 <div className="flex items-center mb-4">
                   <Image width={500} height={500} src={testimonial.image} alt={testimonial.name} className="w-16 h-16 rounded-full mr-4 cover object-cover" />
                   <h3 className="text-xl font-semibold">{testimonial.name}</h3>
                 </div>
                 <p className="text-gray-600 italic">"{testimonial.quote}"</p>
-              </motion.div>
+              </div>
             ))}
           </div>
         </section>
