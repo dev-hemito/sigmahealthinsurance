@@ -9,11 +9,13 @@ const Page = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    plans:'',
     message: ''
   });
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+
   };
 
   const handleSubmit = async (e) => {
@@ -27,6 +29,7 @@ const Page = () => {
         {
           from_name: formData.name,
           from_email: formData.email,
+          from_plans: formData.plans,
           message: formData.message,
           to_email: 'contact@sigmahealth.com',
         },
@@ -71,6 +74,24 @@ const Page = () => {
                   required
                 />
               </div>
+              <div>
+                <label htmlFor="category" className="block text-gray-700 mb-2">Plans</label>
+                <select
+                  name="plans"
+                  id="plans"
+                  onChange={handleChange}
+                  value={formData.plans} // Set the value to formData.plans
+                  className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                >
+                  <option value="" disabled>Select a plan</option>
+                  <option value="basic">Basic Plan</option>
+                  <option value="premium">Premium Plan</option>
+                  <option value="pro">Pro Plan</option>
+                  {/* Add more options as needed */}
+                </select>
+              </div>
+
               <div>
                 <label htmlFor="message" className="block text-gray-700 mb-2">Message</label>
                 <textarea
