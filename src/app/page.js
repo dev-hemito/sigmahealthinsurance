@@ -147,7 +147,7 @@ const page = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               { name: "Ravi Stephan", quote: "Sigma Health has been a lifesaver for my family. Their comprehensive coverage and excellent customer service give us peace of mind.", image: "/download.png" },
-              { name: "Jane Smith", quote: "I've never had an insurance company that cares so much about preventive care. Sigma Health's wellness programs have truly improved my life.", image: "/download.png" },
+              { name: "Arun Lal", quote: "I've never had an insurance company that cares so much about preventive care. Sigma Health's wellness programs have truly improved my life.", image: "/download.png" },
             ].map((testimonial, index) => (
               <motion.div
                 key={index}
