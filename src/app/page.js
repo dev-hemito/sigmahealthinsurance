@@ -52,7 +52,7 @@ const page = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="relative h-40">
-        <Image width={300} height={300} src={image} alt={label} className="w-full h-full object-cover" />
+        <Image width={500} height={500} src={image} alt={label} className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-black opacity-50"></div>
         <div className="absolute inset-0 flex items-center justify-center">
           <Icon className="text-white text-5xl" />
@@ -105,9 +105,9 @@ const page = () => {
           <h2 className="text-3xl font-semibold text-center mb-12">Why Choose Sigma Health?</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: <FaShieldAlt className="text-blue-600 text-3xl" />, title: "Comprehensive Coverage", description: "Protecting you from unexpected health expenses", image: "/feature.jpg" },
-              { icon: <FaHeart className="text-blue-600 text-3xl" />, title: "Personalized Care", description: "Tailored plans to meet your unique health needs", image: "/feature.jpg" },
-              { icon: <FaUsers className="text-blue-600 text-3xl" />, title: "Family-Focused", description: "Ensuring the well-being of your loved ones", image: "/feature.jpg" }
+              { icon: <FaShieldAlt className="text-blue-600 text-3xl" />, title: "Comprehensive Coverage", description: "Protecting you from unexpected health expenses", image: "/ani.jpg" },
+              { icon: <FaHeart className="text-blue-600 text-3xl" />, title: "Personalized Care", description: "Tailored plans to meet your unique health needs", image: "/personalisedcare.jpg" },
+              { icon: <FaUsers className="text-blue-600 text-3xl" />, title: "Family-Focused", description: "Ensuring the well-being of your loved ones", image: "/Family-Focused.jpg" }
             ].map((item, index) => (
               <InsuranceScheme key={index} {...item} />
             ))}
@@ -130,13 +130,13 @@ const page = () => {
                 icon={FaSmile}
                 value={98}
                 label="Customer Satisfaction"
-                image="/client.jpg"
+                image="/customer.jpg"
               />
               <ImpactCard
                 icon={FaHospital}
                 value={5000}
                 label="Healthcare Partners"
-                image="/client.jpg"
+                image="/partner.jpg"
               />
             </div>
           </div>

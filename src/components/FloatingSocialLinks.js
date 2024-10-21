@@ -1,7 +1,7 @@
 'use client'
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPhone } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaPhone, FaWhatsapp } from 'react-icons/fa';
 
 const FloatingSocialLinks = () => {
   return (
@@ -13,35 +13,12 @@ const FloatingSocialLinks = () => {
     >
       <div className="flex space-x-3">
 
-
-
         <motion.a
-          href=""
+          href="https://wa.me/+919349780957?text=I'm%20interested%20in%20your%20service."
           className="text-blue-600 hover:text-blue-800 "
           whileHover={{ scale: 1.2 }}
           whileTap={{ scale: 0.9 }}
-        >  <FaFacebook size={24} /></motion.a>
-
-        <motion.a
-          href=""
-          className="text-blue-600 hover:text-blue-800 "
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >  <FaTwitter size={24} /></motion.a>
-
-        <motion.a
-          href=""
-          className="text-blue-600 hover:text-blue-800 "
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >  <FaLinkedin size={24} /></motion.a>
-
-        <motion.a
-          href=""
-          className="text-blue-600 hover:text-blue-800 "
-          whileHover={{ scale: 1.2 }}
-          whileTap={{ scale: 0.9 }}
-        >  <FaInstagram size={24} /></motion.a>
+        >  <FaWhatsapp size={24} /></motion.a>
         <motion.a
           className="text-blue-600 hover:text-blue-800 "
           whileHover={{ scale: 1.2 }}

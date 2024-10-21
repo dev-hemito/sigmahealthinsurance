@@ -5,7 +5,7 @@ import { FaChevronRight, FaTimes } from 'react-icons/fa';
 
 const insuranceServices = {
   "SBI General": {
-    image: "/home.jpg",
+    image: "/sbi.jpg",
     plans: [
       {
         title: "Arogya Supreme",
@@ -40,7 +40,7 @@ const insuranceServices = {
     ]
   },
   "Care Health": {
-    image: "/service.jpg",
+    image: "/care.jpg",
     plans: [
       {
         title: "Care Supreme",
@@ -140,8 +140,8 @@ const ServiceCard = ({ title, image, onClick }) => (
   >
     <div className="relative h-64 overflow-hidden">
       <Image
-        width={300}
-        height={300}
+        width={500}
+        height={500}
         src={image}
         alt={title}
         className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
