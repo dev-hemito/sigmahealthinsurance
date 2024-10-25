@@ -8,7 +8,7 @@ const Page = () => {
   const [status, setStatus] = useState('');
   const [formData, setFormData] = useState({
     name: '',
-    email: '',
+    phone: '',
     plans:'',
     message: ''
   });
@@ -28,7 +28,7 @@ const Page = () => {
         'template_382eby9',
         {
           from_name: formData.name,
-          from_email: formData.email,
+          from_phone: formData.phone,
           from_plans: formData.plans,
           message: formData.message,
           to_email: 'contact@sigmahealth.com',
@@ -36,7 +36,7 @@ const Page = () => {
         'IFKy67yDOUJZ373_E'
       );
       setStatus('success');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', phone: '', message: '' });
     } catch (error) {
       setStatus('error');
     }
@@ -63,12 +63,12 @@ const Page = () => {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-gray-700 mb-2">Email</label>
+                <label htmlFor="phone" className="block text-gray-700 mb-2">Phone</label>
                 <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
+                  type="number"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
                   onChange={handleChange}
                   className="w-full p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
