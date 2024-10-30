@@ -63,6 +63,7 @@ const page = () => {
           <AnimatedCounter end={value} duration={2000} />
           {label === "Customer Satisfaction" && "%"}
           {label === "Healthcare Partners" && "+"}
+          {label === "Insured Members" && "+"}
         </p>
         <p className="text-xl text-gray-700">{label}</p>
       </div>
@@ -90,12 +91,12 @@ const page = () => {
                 Safeguarding Your Health, Securing Your Future
               </h1>
               <p className="text-xl text-white mb-8">
-                Innovative health insurance solutions tailored just for you
+                Affordable health insurance solutions tailored just for you
               </p>
-              <Link href="/contact"
+              <Link href="tel:+919349780957"
                 className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                View plans
+                Call Us
               </Link>
             </div>
           </motion.div>
@@ -122,7 +123,7 @@ const page = () => {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
               <ImpactCard
                 icon={FaUsers}
-                value={500000}
+                value={1000}
                 label="Insured Members"
                 image="/client.jpg"
               />
@@ -134,8 +135,7 @@ const page = () => {
               />
               <ImpactCard
                 icon={FaHospital}
-                value={5000}
-                label="Healthcare Partners"
+                label="Multiple Healthcare Partners"
                 image="/partner.jpg"
               />
             </div>
