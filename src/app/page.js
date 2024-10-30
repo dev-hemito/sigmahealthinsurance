@@ -60,7 +60,8 @@ const page = () => {
       </div>
       <div className="p-6 text-center">
         <p className="text-4xl font-bold mb-2 text-blue-600">
-          <AnimatedCounter end={value} duration={2000} />
+      {value?<>
+          <AnimatedCounter end={value} duration={2000} /> </> : '' }
           {label === "Customer Satisfaction" && "%"}
           {label === "Healthcare Partners" && "+"}
           {label === "Insured Members" && "+"}
